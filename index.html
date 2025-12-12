@@ -20,7 +20,10 @@
  </a>
  <nav id="menu">
     <div>
-        <i class="fas fa-bars" onclick="openMenu()"></i>
+        <div class="iconos-menu">
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+        </div>
         <ul>
                     <li>
                         <a href="#" onclick="closeMenu()">Visita Toledo</a>
@@ -31,15 +34,22 @@
                     <li>
                         <a href="#" onclick="closeMenu()">Experiencias</a>
                     </li>
-                    <li>
-                        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-                    </li>
         </ul>
     </div>
  </nav>
-
-
+ 
 </header>
+<section class="visita-toledo">
+    <h2>Visita Toledo</h2>
+    <figure id="silueta">
+        <img src="media/images/silueta.svg" alt="Silueta Toledo">
+
+    </figure>
+    <figure  id="fotop">
+        <img src="media/images/toledo.jpg" alt="Foto Toledo">
+        
+    </figure>
+</section>
 </body>
 
 
