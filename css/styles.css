@@ -1,4 +1,7 @@
-*{
+/* =========================
+   RESET / BASE
+========================= */
+* {
     margin: 0;
     padding: 0;
 }
@@ -13,21 +16,27 @@ a {
 }
 
 img {
-    height: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 body {
     padding-top: 170px;
 }
 
-
+/* =========================
+   VARIABLES
+========================= */
 :root {
     --color-granate: #A52357;
     --color-negro: #1D1D1D;
     --font-serif: "Poppins", sans-serif;
 }
-/* MENU */
 
+/* =========================
+   HEADER / MENU
+========================= */
 header {
     position: fixed;
     top: 0;
@@ -41,6 +50,22 @@ header {
     padding: 15px;
     height: 170px;
     z-index: 1000;
+    box-shadow: 0 8px 30px rgba(165, 35, 87, 0.418);
+}
+
+/* Logo */
+.logo img {
+    width: 550px;
+}
+
+/* Iconos menú */
+#menu .iconos-menu {
+    margin-right: 60px;
+}
+
+#menu .fa-bars {
+    color: var(--color-granate);
+    font-size: 4.5rem;
 }
 
 #menu .fa-xmark {
@@ -49,17 +74,14 @@ header {
     font-size: 4.5rem;
 }
 
-.logo img {
-    width: 550px;
-}
-
+/* Menú desplegable */
 #menu ul {
     position: fixed;
     left: 0;
-    top: calc(100% + 170px); /* estado cerrado */
+    top: calc(100% + 170px); 
     width: 100%;
-    height: calc(100vh - 170px); /* ocupa el resto de pantalla */
-    background-color: white;     /* fondo blanco */
+    height: calc(100vh - 170px); 
+    background-color: white; 
     transition: 0.5s;
 
     display: flex;
@@ -68,18 +90,18 @@ header {
     gap: 15px;
 }
 
-
 #menu ul a {
     font-size: 3.4rem;
-
 }
 
 #menu ul li {
     padding-top: 35px;
     padding-right: 45px;
+
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+
     color: var(--color-granate);
     transition: color 0.3s ease;
 }
@@ -88,33 +110,81 @@ header {
     color: var(--color-negro);
 }
 
-#menu .fa-bars {
-    color: var(--color-granate);
-    font-size: 4.5rem;
-}
-
-#menu .iconos-menu {
-    margin-right: 60px;
-}
-
-#menu .fa-xmark {
-    color: var(--color-granate);
-    font-size: 4.5rem;
-}
-
-/* inicio */
-
-.visita-toledo h2 {
-    color: var(--color-granate);
-    font-size: 8.5rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-
+/* =========================
+   SECCIÓN VISITA TOLEDO
+========================= */
+.visita-toledo {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
 }
 
 .visita-toledo #fotop {
-    height: 1400px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #A52357;
+    height: 100%;
+    z-index: 1;
+}
+
+.visita-toledo #fotop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visita-toledo h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.1;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.visita-toledo #silueta {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 120%;
+}
+
+/* =========================
+   SECCIÓN SUGERENCIAS
+========================= */
+.sugerencias {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-seccion h2 {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 3.5rem;
+    
+}
+
+.titulo-seccion {
+    background-color: var(--color-granate);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
