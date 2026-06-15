@@ -1,9 +1,7 @@
-/* =========================
-   RESET / BASE
-========================= */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -21,87 +19,119 @@ img {
     display: block;
 }
 
-body {
-    padding-top: 170px;
-}
-
-/* =========================
-   VARIABLES
-========================= */
+/* VARIABLES*/
 :root {
     --color-granate: #A52357;
+    --color-granate-oscuro: #4A2634;
     --color-negro: #1D1D1D;
     --font-serif: "Poppins", sans-serif;
 }
 
-/* =========================
-   HEADER / MENU
-========================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 4.75rem;
+    font-family: var(--font-serif);
+    color: var(--color-negro);
+    background-color: white;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: var(--font-serif);
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.3em;
+    color: var(--color-granate-oscuro);
+    text-align: center;
+}
+
+h3 {
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+/*MENU*/
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    height: 170px;
+    padding: 0.75rem 1rem;
+    height: 4.75rem;
     z-index: 1000;
-    box-shadow: 0 8px 30px rgba(165, 35, 87, 0.418);
+    box-shadow: 0 0.35rem 1.25rem rgba(165, 35, 87, 0.2);
 }
 
-/* Logo */
 .logo img {
-    width: 550px;
+    width: 8.9rem;
 }
 
-/* Iconos menú */
 #menu .iconos-menu {
-    margin-right: 60px;
+    margin-right: 0;
 }
 
 #menu .fa-bars {
     color: var(--color-granate);
-    font-size: 4.5rem;
+    font-size: 1.4rem;
 }
 
 #menu .fa-xmark {
     display: none;
     color: var(--color-granate);
-    font-size: 4.5rem;
+    font-size: 1.6rem;
 }
 
-/* Menú desplegable */
 #menu ul {
     position: fixed;
     left: 0;
-    top: calc(100% + 170px); 
+    top: -20rem;
     width: 100%;
-    height: calc(100vh - 170px); 
-    background-color: white; 
+    height: auto;
+    background-color: white;
     transition: 0.5s;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 15px;
+    gap: 0.9rem;
+    padding: 1.8rem 0 2rem;
+    box-shadow: 0 0.35rem 1.25rem rgba(165, 35, 87, 0.15);
 }
 
 #menu ul a {
-    font-size: 3.4rem;
+    font-size: 1.35rem;
 }
 
 #menu ul li {
-    padding-top: 35px;
-    padding-right: 45px;
-
-    font-family: "Poppins", sans-serif;
+    padding-right: 1.4rem;
+    font-family: var(--font-serif);
     font-weight: 400;
     font-style: normal;
-
     color: var(--color-granate);
     transition: color 0.3s ease;
 }
@@ -110,81 +140,344 @@ header {
     color: var(--color-negro);
 }
 
-/* =========================
-   SECCIÓN VISITA TOLEDO
-========================= */
-.visita-toledo {
+/*INICIO*/
+.inicio {
     position: relative;
     width: 100%;
-    height: 1000px;
+}
+
+.inicio-imagen {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 17rem;
     overflow: hidden;
 }
 
-.visita-toledo #fotop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.visita-toledo #fotop img {
-    width: 100%;
+.inicio-imagen img {
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
-.visita-toledo h2 {
-    color: white;
-    font-size: 2.5rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.1;
-
+.inicio-imagen::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.visita-toledo #silueta {
-    position: absolute;
+    left: 0;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: 120%;
+    width: 100%;
+    height: 55%;
+    background-image: linear-gradient(to top, rgba(165, 35, 87, 0.86), rgba(165, 35, 87, 0));
 }
 
-/* =========================
-   SECCIÓN SUGERENCIAS
-========================= */
-.sugerencias {
-    margin-top: 40px;
+
+.inicio-destacado {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 72%;
+    max-width: 17rem;
+    min-height: 14rem;
+    padding: 2rem 1.2rem;
+    border-radius: 1.65rem;
+    background-color: rgba(165, 35, 87, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 1.6rem;
+    z-index: 2;
 }
 
-.titulo-seccion h2 {
-    font-family: "Marcellus", serif;
-    font-weight: 400;
-    font-style: normal;
+.inicio-destacado h1 {
     color: white;
-    font-size: 3.5rem;
-    
+    font-size: 1.35rem;
+    line-height: 1.18em;
+    text-transform: uppercase;
 }
 
-.titulo-seccion {
-    background-color: var(--color-granate);
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.boton-visita {
+    display: inline-block;
+    background-color: white;
+    color: var(--color-granate);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.35rem;
+    transition: 0.3s;
+}
 
+.boton-visita:active {
+    background-color: var(--color-granate-oscuro);
+    color: white;
+}
+
+/*EVENTOS*/
+.eventos {
+    padding: 3.7rem 0 4rem;
+    background-color: white;
+}
+
+.eventos h2 {
+    margin-bottom: 1.35rem;
+}
+
+.eventos-listado {
+    display: flex;
+    gap: 1.05rem;
+    overflow-x: scroll;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    padding-bottom: 0.6rem;
+    scrollbar-width: none;
+}
+
+.eventos-listado::-webkit-scrollbar {
+    display: none;
+}
+
+.evento {
+    position: relative;
+    flex: 0 0 14.8rem;
+    border-radius: 0.55rem;
+    overflow: hidden;
+    background-color: var(--color-granate);
+}
+
+.evento figure {
+    width: 100%;
+    height: 8.4rem;
+    overflow: hidden;
+}
+
+.evento figure img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.evento-fecha {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.35rem;
+    background-color: var(--color-granate-oscuro);
+    color: white;
+    font-size: 0.62rem;
+    line-height: 1em;
+    padding: 0.42rem 0.65rem;
+    border-radius: 0.35rem;
+}
+
+.evento h3 {
+    color: white;
+    padding: 0.65rem 0.65rem 0.8rem;
+}
+
+
+/*CLIMA*/
+.clima {
+    padding: 0 1.75rem 4rem;
+    background-color: white;
+}
+
+.clima-contenido {
+    width: 100%;
+}
+
+.clima h2 {
+    margin-bottom: 1rem;
+}
+
+.clima p {
+    color: var(--color-negro);
+    margin-bottom: 1.2rem;
+}
+
+.grafico-clima {
+    width: 100%;
+    height: 17rem;
+    padding: 1rem 0.6rem 0.6rem;
+    border: 0.1rem solid var(--color-granate);
+    border-radius: 0.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.clima-texto-final {
+    font-weight: 500;
+    color: var(--color-granate-oscuro);
+}
+
+
+/*FOOTER*/
+.footer-web {
+    background-color: var(--color-granate-oscuro);
+    color: white;
+    padding: 1.8rem 1.75rem 2rem;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-web p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.footer-logo {
+    width: 8rem;
+}
+
+.footer-logo img {
+    filter: brightness(0) invert(1);
+}
+
+.footer-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    color: white;
+}
+
+.footer-enlaces a {
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.footer-enlaces span {
+    color: white;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 5.5rem;
+    }
+
+    header {
+        height: 5.5rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .logo img {
+        width: 11rem;
+    }
+
+    #menu .fa-bars,
+    #menu .fa-xmark {
+        display: none;
+    }
+
+    #menu ul {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+        padding-top: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    #menu ul li {
+        padding-right: 0;
+    }
+
+    #menu ul a {
+        font-size: 1rem;
+    }
+
+    .inicio-imagen {
+        height: 24rem;
+    }
+
+    .inicio-destacado {
+        max-width: 22rem;
+        min-height: 16rem;
+        border-radius: 2rem;
+    }
+
+    .inicio-destacado h1 {
+        font-size: 1.65rem;
+    }
+
+    .boton-visita:hover {
+        background-color: var(--color-granate-oscuro);
+        color: white;
+    }
+
+    .eventos {
+        padding: 4.5rem 4rem;
+    }
+
+    .eventos h2 {
+        margin-left: 0;
+    }
+
+    .eventos-listado {
+        overflow-x: visible;
+        gap: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .evento {
+        flex: 1;
+    }
+
+    .evento figure {
+        height: 10rem;
+    }
+
+    .clima {
+        padding: 0 4rem 5rem;
+    }
+
+    .clima-contenido {
+        max-width: 58rem;
+    }
+
+    .grafico-clima {
+        height: 23rem;
+        padding: 1.5rem 1rem 1rem;
+    }
+
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .footer-web {
+        padding: 2.2rem 4rem;
+    }
+
+    .footer-contenido {
+        max-width: 58rem;
+    }
+
+    .footer-logo {
+        width: 9rem;
+    }
+
+}
+
+
+.pagina-provisional {
+    min-height: 40vh;
+    padding: 4rem 1.75rem;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    .pagina-provisional {
+        padding: 5rem 4rem;
+    }
 }
