@@ -53,7 +53,11 @@ h1 {
 }
 
 h2 {
+<<<<<<< HEAD
     font-size: 1.95rem;
+=======
+    font-size: 1.7rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     font-weight: 600;
     line-height: 1.3em;
     color: var(--color-granate-oscuro);
@@ -84,7 +88,11 @@ header {
     align-items: center;
     padding: 0.75rem 1rem;
     height: 4.75rem;
+<<<<<<< HEAD
     z-index: 2000;
+=======
+    z-index: 1000;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     box-shadow: 0 0.35rem 1.25rem rgba(165, 35, 87, 0.2);
 }
 
@@ -150,6 +158,7 @@ header {
 .inicio-imagen {
     position: relative;
     width: 100%;
+<<<<<<< HEAD
     height: 62vh;
     min-height: 27rem;
     overflow: hidden;
@@ -164,6 +173,29 @@ header {
     display: block;
 }
 
+=======
+    height: 40vh;
+    min-height: 17rem;
+    overflow: hidden;
+}
+
+.inicio-imagen img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.inicio-imagen::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    background-image: linear-gradient(to top, rgba(165, 35, 87, 0.86), rgba(165, 35, 87, 0));
+}
+
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 
 .inicio-destacado {
     position: absolute;
@@ -211,16 +243,24 @@ header {
 
 /*EVENTOS*/
 .eventos {
+<<<<<<< HEAD
     padding: 6rem 0 7.5rem;
+=======
+    padding: 3.7rem 0 4rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     background-color: white;
 }
 
 .eventos h2 {
+<<<<<<< HEAD
     margin-bottom: 1.7rem;
 }
 
 .evento h3 {
     text-align: center;
+=======
+    margin-bottom: 1.35rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 }
 
 .eventos-listado {
@@ -239,7 +279,11 @@ header {
 
 .evento {
     position: relative;
+<<<<<<< HEAD
     flex: 0 0 15.2rem;
+=======
+    flex: 0 0 14.8rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     border-radius: 0.55rem;
     overflow: hidden;
     background-color: var(--color-granate);
@@ -247,7 +291,11 @@ header {
 
 .evento figure {
     width: 100%;
+<<<<<<< HEAD
     height: 14.5rem;
+=======
+    height: 8.4rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     overflow: hidden;
 }
 
@@ -271,17 +319,25 @@ header {
 
 .evento h3 {
     color: white;
+<<<<<<< HEAD
     padding: 0.9rem 0.75rem 1rem;
 }
 
 .evento {
     cursor: pointer;
+=======
+    padding: 0.65rem 0.65rem 0.8rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 }
 
 
 /*CLIMA*/
 .clima {
+<<<<<<< HEAD
     padding: 2.5rem 1.75rem 7rem;
+=======
+    padding: 0 1.75rem 4rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     background-color: white;
 }
 
@@ -296,7 +352,10 @@ header {
 .clima p {
     color: var(--color-negro);
     margin-bottom: 1.2rem;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 }
 
 .grafico-clima {
@@ -314,6 +373,7 @@ header {
 }
 
 
+<<<<<<< HEAD
 /*MODAL EVENTOS*/
 .fondo-modal-eventos {
     position: fixed;
@@ -395,6 +455,8 @@ header {
 }
 
 
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 /*FOOTER*/
 .footer-web {
     background-color: var(--color-granate-oscuro);
@@ -480,7 +542,11 @@ header {
     }
 
     .inicio-imagen {
+<<<<<<< HEAD
         height: 38rem;
+=======
+        height: 24rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .inicio-destacado {
@@ -499,7 +565,11 @@ header {
     }
 
     .eventos {
+<<<<<<< HEAD
         padding: 7rem 4rem 8rem;
+=======
+        padding: 4.5rem 4rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .eventos h2 {
@@ -508,12 +578,18 @@ header {
 
     .eventos-listado {
         overflow-x: visible;
+<<<<<<< HEAD
         gap: 1.8rem;
         padding-left: 0;
         padding-right: 0;
         max-width: 78rem;
         margin-left: auto;
         margin-right: auto;
+=======
+        gap: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .evento {
@@ -521,17 +597,28 @@ header {
     }
 
     .evento figure {
+<<<<<<< HEAD
         height: 17rem;
     }
 
     .clima {
         padding: 2rem 4rem 8rem;
+=======
+        height: 10rem;
+    }
+
+    .clima {
+        padding: 0 4rem 5rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .clima-contenido {
         max-width: 58rem;
+<<<<<<< HEAD
         margin-left: auto;
         margin-right: auto;
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .grafico-clima {
@@ -541,7 +628,11 @@ header {
 
 
     h2 {
+<<<<<<< HEAD
         font-size: 2.35rem;
+=======
+        font-size: 2rem;
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .footer-web {
@@ -550,8 +641,11 @@ header {
 
     .footer-contenido {
         max-width: 58rem;
+<<<<<<< HEAD
         margin-left: auto;
         margin-right: auto;
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
     }
 
     .footer-logo {
@@ -572,6 +666,7 @@ header {
         padding: 5rem 4rem;
     }
 }
+<<<<<<< HEAD
 
 .seccion-visita {
     padding: 6rem 1.75rem 0;
@@ -837,3 +932,5 @@ header {
         padding: 0.95rem 1.65rem;
     }
 }
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
