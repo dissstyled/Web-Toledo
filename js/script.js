@@ -14,6 +14,7 @@ function closeMenu() {
     $("#menu .fa-bars").show();
 }
 
+<<<<<<< HEAD
 
 
 function abrirModalEvento(idModal) {
@@ -34,6 +35,8 @@ function cerrarModalEvento() {
     }, 350);
 }
 
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 $(document).ready(function () {
     "use strict";
     var canvas = document.getElementById("graficoTemperatura");
@@ -77,6 +80,7 @@ $(document).ready(function () {
             }
         });
     }
+<<<<<<< HEAD
 
     $("#evento-semana-santa").click(function () {
         abrirModalEvento("#modal-semana-santa");
@@ -98,4 +102,6 @@ $(document).ready(function () {
         cerrarModalEvento();
     });
 
+=======
+>>>>>>> f1f6c7e034f1424887b553288add4f145d25f811
 });
