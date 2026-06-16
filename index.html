@@ -9,7 +9,7 @@
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,9 @@
 <main>
     <section id="inicio" class="inicio">
         <figure class="inicio-imagen">
-            <img src="media/images/inicio-toledo.jpg">
+            <video autoplay loop muted>
+                <source src="media/video/iniciotoledo.mp4" type="video/mp4">
+            </video>
         </figure>
         <div class="inicio-destacado">
             <h1>Ciudad Patrimonio<br>de la Humanidad</h1>
@@ -55,21 +57,21 @@
         <div class="eventos-listado">
             <article class="evento" id="evento-semana-santa">
                 <figure>
-                    <img src="media/images/evento-semana-santa.jpg">
+                    <img src="media/images/semanasanta.webp">
                 </figure>
                 <p class="evento-fecha">29/03/2026</p>
                 <h3>Semana Santa</h3>
             </article>
             <article class="evento" id="evento-corpus">
                 <figure>
-                    <img src="media/images/evento-corpus.jpg">
+                    <img src="media/images/corpus.webp">
                 </figure>
                 <p class="evento-fecha">04/06/2026</p>
                 <h3>Corpus Christi</h3>
             </article>
             <article class="evento" id="evento-musica-el-greco">
                 <figure>
-                    <img src="media/images/evento-musica-el-greco.jpg">
+                    <img src="media/images/festivalgreco.webp">
                 </figure>
                 <p class="evento-fecha">03/10/2026</p>
                 <h3>Festival El Greco</h3>
@@ -91,7 +93,7 @@
 <section id="modal-semana-santa" class="modal-evento">
     <i class="fa-solid fa-xmark cerrar-modal-evento"></i>
     <figure>
-        <img src="media/images/evento-semana-santa.jpg">
+        <img src="media/images/semanasanta.webp">
     </figure>
     <div class="modal-evento-texto">
         <h2>Semana Santa</h2>
@@ -101,7 +103,7 @@
 <section id="modal-corpus" class="modal-evento">
     <i class="fa-solid fa-xmark cerrar-modal-evento"></i>
     <figure>
-        <img src="media/images/evento-corpus.jpg">
+        <img src="media/images/corpus.webp">
     </figure>
     <div class="modal-evento-texto">
         <h2>Corpus Christi</h2>
@@ -111,7 +113,7 @@
 <section id="modal-musica-el-greco" class="modal-evento">
     <i class="fa-solid fa-xmark cerrar-modal-evento"></i>
     <figure>
-        <img src="media/images/evento-musica-el-greco.jpg">
+        <img src="media/images/festivalgreco.webp">
     </figure>
     <div class="modal-evento-texto">
         <h2>Festival El Greco</h2>
@@ -121,10 +123,12 @@
 
 <footer class="footer-web">
     <div class="footer-contenido">
-        <p>Concejalía de Turismo - Excelentísimo Ayuntamiento de Toledo</p>
-        <figure class="footer-logo">
-            <img src="media/images/logo-toledo.png" alt="Ayuntamiento de Toledo">
-        </figure>
+        <div class="footer-info">
+            <p>Concejalía de Turismo - Excelentísimo Ayuntamiento de Toledo</p>
+            <figure class="footer-logo">
+                <img src="media/images/logo-toledo.png">
+            </figure>
+        </div>
         <nav class="footer-enlaces">
             <a href="#">Aviso Legal</a>
             <span>.</span>
